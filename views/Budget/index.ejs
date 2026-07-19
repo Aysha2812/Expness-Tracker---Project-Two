@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budgets</title>
+</head>
+<body>
+<a href="/">Homepage</a>
+<a href="/budgets/new">Add New Budget</a>
+
+<h1>My Budgets</h1>
+<% budgets.forEach(budget=>{ %>
+<p>
+Amount: <%= budget.amount %> BD
+</p>
+<p>
+Month: <%= budget.month %>
+</p>
+<p>
+Category: <%= budget.category.name %>
+</p>
+
+<a href="/budgets/<%= budget._id %>">View</a>
+<hr>
+<% }) %>
+
+</body>
+</html>

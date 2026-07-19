@@ -1,16 +1,18 @@
 <nav>
-    
-    <a href="/">Homepage</a>
-    <% if (user){ %>
-    <a href="/auth/sign-out">Logout</a>
-    <a href="Categories/new">New Category</a>
-    <a href="/expenses/new">Add Expense</a>
-    <a href="/budgets/new">Add Budget</a>
+<a href="/">Homepage</a>
 
-    <% } else{ %>
-    <a href="/auth/sign-up">Sign up</a>
-    <a href="/auth/sign-in">Login</a>
+<% if (user) { %>
 
-    <% } %>
-    
+<a href="/expenses">Expenses</a>
+<a href="/categories">Categories</a>
+<a href="/budgets">Budgets</a>
+
+<a href="/auth/sign-out">Logout</a>
+
+<% } else { %>
+
+<a href="/auth/sign-up">Sign Up</a>
+<a href="/auth/sign-in">Login</a>
+
+<% } %>
 </nav>

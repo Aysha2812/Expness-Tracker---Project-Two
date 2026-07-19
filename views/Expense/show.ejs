@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Details</title>
+</head>
+<body>
+
+<h1>Expense Details</h1>
+
+<p><strong>Title:</strong> <%= expense.title %></p>
+<p><strong>Amount:</strong> <%= expense.amount %> BD</p>
+<p><strong>Date:</strong> <%= expense.date %></p>
+<p><strong>Description:</strong> <%= expense.description %></p>
+<p><strong>Payment Method:</strong> <%= expense.paymentMethod %></p>
+<p><strong>Category:</strong> <%= expense.category.name %></p>
+
+<a href="/expenses">Back to Expenses</a>
+
+</body>
+</html>
