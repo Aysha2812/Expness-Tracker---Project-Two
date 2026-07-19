@@ -11,6 +11,8 @@ const connectToDB=require("./db.js")
 //Import Controllers
 const expenseController=require("./controllers/expense.controller")
 
+const budgetController=require("./controllers/budget.controllers");
+
 // middleware imports
 const isSignedIn=require("./middleware/is-signed-in.js")
 const passUserToView=require("./middleware/pass-user-to-view.js")
@@ -47,6 +49,7 @@ app.use("/auth",authController)
 app.use("/",indexController)
 app.use("/categories",categoryController)
 app.use("/expenses",expenseController)
+app.use("/budgets",budgetController);
 
 // connect to database and listen on Port 3000
 async function startServer(){
