@@ -7,6 +7,8 @@
 </head>
 <body>
 
+<a href="/">Homepage</a>
+
 <h1>Expense Details</h1>
 
 <p><strong>Title:</strong> <%= expense.title %></p>
@@ -14,11 +16,18 @@
 <p><strong>Date:</strong> <%= expense.date %></p>
 <p><strong>Description:</strong> <%= expense.description %></p>
 <p><strong>Payment Method:</strong> <%= expense.paymentMethod %></p>
-<p><strong>Category:</strong> <%= expense.category.name %></p>
 
 <a href="/expenses/<%= expense._id %>/edit">Edit Expense</a>
+
 <br><br>
-<a href="/expenses">Back</a>
+
+<form action="/expenses/<%= expense._id %>?_method=DELETE" method="POST">
+<button type="submit">Delete Expense</button>
+</form>
+
+<br>
+
+<a href="/expenses">Back to Expenses</a>
 
 </body>
 </html>

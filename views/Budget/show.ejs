@@ -7,15 +7,24 @@
 </head>
 <body>
 
+<a href="/">Homepage</a>
+
 <h1>Budget Details</h1>
 
 <p><strong>Amount:</strong> <%= budget.amount %> BD</p>
 <p><strong>Month:</strong> <%= budget.month %></p>
-<p><strong>Category:</strong> <%= budget.category.name %></p>
 
 <a href="/budgets/<%= budget._id %>/edit">Edit Budget</a>
+
 <br><br>
-<a href="/budgets">Back</a>
+
+<form action="/budgets/<%= budget._id %>?_method=DELETE" method="POST">
+<button type="submit">Delete Budget</button>
+</form>
+
+<br>
+
+<a href="/budgets">Back to Budgets</a>
 
 </body>
 </html>
