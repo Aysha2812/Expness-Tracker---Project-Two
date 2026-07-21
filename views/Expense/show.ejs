@@ -16,7 +16,9 @@
 <p><strong>Payment Method:</strong> <%= expense.paymentMethod %></p>
 <p><strong>Category:</strong> <%= expense.category.name %></p>
 
-<a href="/expenses">Back to Expenses</a>
+<a href="/expenses/<%= expense._id %>/edit">Edit Expense</a>
+<br><br>
+<a href="/expenses">Back</a>
 
 </body>
 </html>

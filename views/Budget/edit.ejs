@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit Budget</title>
+</head>
+<body>
+
+<h1>Edit Budget</h1>
+
+<form action="/budgets/<%= budget._id %>?_method=PUT" method="POST">
+
+<label>Amount:</label>
+<input type="number" name="amount" value="<%= budget.amount %>" required>
+
+<br><br>
+
+<label>Month:</label>
+<input type="month" name="month" value="<%= budget.month %>" required>
+
+<br><br>
+
+<button type="submit">Update Budget</button>
+
+</form>
+
+<a href="/budgets">Back</a>
+
+</body>
+</html>

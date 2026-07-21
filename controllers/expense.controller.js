@@ -56,4 +56,37 @@ res.redirect("/");
 }
 });
 
+//GET-Edit expense form
+router.get("/:id/edit",async(req,res)=>{
+try{
+const expense=await Expense.findById(req.params.id);
+res.render("expense/edit.ejs",{expense});
+}catch(error){
+console.log(error);
+res.redirect("/expenses");
+}
+});
+
+//PUT-Update expense
+router.put("/:id",async(req,res)=>{
+try{
+await Expense.findByIdAndUpdate(req.params.id,req.body);
+res.redirect(`/expenses/${req.params.id}`);
+}catch(error){
+console.log(error);
+res.redirect("/expenses");
+}
+});
+
+//DELETE-Delete expense
+router.delete("/:id",async(req,res)=>{
+try{
+await Expense.findByIdAndDelete(req.params.id);
+res.redirect("/expenses");
+}catch(error){
+console.log(error);
+res.redirect("/expenses");
+}
+});
+
 module.exports=router;

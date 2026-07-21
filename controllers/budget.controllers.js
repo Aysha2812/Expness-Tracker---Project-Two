@@ -56,4 +56,37 @@ res.redirect("/");
 }
 });
 
+//GET-Edit budget form
+router.get("/:id/edit",async(req,res)=>{
+try{
+const budget=await Budget.findById(req.params.id);
+res.render("budget/edit.ejs",{budget});
+}catch(error){
+console.log(error);
+res.redirect("/budgets");
+}
+});
+
+//PUT-Update budget
+router.put("/:id",async(req,res)=>{
+try{
+await Budget.findByIdAndUpdate(req.params.id,req.body);
+res.redirect(`/budgets/${req.params.id}`);
+}catch(error){
+console.log(error);
+res.redirect("/budgets");
+}
+});
+
+//DELETE-Delete budget
+router.delete("/:id",async(req,res)=>{
+try{
+await Budget.findByIdAndDelete(req.params.id);
+res.redirect("/budgets");
+}catch(error){
+console.log(error);
+res.redirect("/budgets");
+}
+});
+
 module.exports=router;

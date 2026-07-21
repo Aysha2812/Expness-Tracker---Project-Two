@@ -49,4 +49,37 @@ res.redirect("/categories");
 }
 });
 
+//GET-Edit category form
+router.get("/:id/edit",async(req,res)=>{
+try{
+const category=await Category.findById(req.params.id);
+res.render("Category/edit.ejs",{category});
+}catch(error){
+console.log(error);
+res.redirect("/categories");
+}
+});
+
+//PUT-Update category
+router.put("/:id",async(req,res)=>{
+try{
+await Category.findByIdAndUpdate(req.params.id,req.body);
+res.redirect(`/categories/${req.params.id}`);
+}catch(error){
+console.log(error);
+res.redirect("/categories");
+}
+});
+
+//DELETE-Delete category
+router.delete("/:id",async(req,res)=>{
+try{
+await Category.findByIdAndDelete(req.params.id);
+res.redirect("/categories");
+}catch(error){
+console.log(error);
+res.redirect("/categories");
+}
+});
+
 module.exports=router;
