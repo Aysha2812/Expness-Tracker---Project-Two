@@ -27,6 +27,7 @@ app.use(express.static("public"))
 app.use(express.urlencoded({extended:false}))
 app.use(morgan("dev"))
 app.use(methodOverride("_method"))
+app.use(express.static("public"));
 
 app.use(session({
 secret:process.env.SESSION_SECRET,

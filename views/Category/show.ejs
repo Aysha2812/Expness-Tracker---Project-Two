@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Category Details</title>
+<link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
 
 <a href="/">Homepage</a>
@@ -17,9 +19,11 @@
 
 <br><br>
 
+<form action="/categories/<%= category._id %>?_method=DELETE" method="POST">
+<button type="submit">Delete Category</button>
+</form>
 
-
-
+<br>
 
 <a href="/categories">Back to Categories</a>
 

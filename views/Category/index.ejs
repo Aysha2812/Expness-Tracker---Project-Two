@@ -4,21 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Categories</title>
+<link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-<a href="/">Homepage</a>
-<a href="/categories/new">Add New Category</a>
+
+<%- include("../partials/navbar.ejs") %>
+
+<div class="container">
+
 <h1>My Categories</h1>
+
+<a class="button" href="/categories/new">Add Category</a>
 
 <% categories.forEach(category=>{ %>
 
-<p><strong>Category Name:</strong> <%= category.name %></p>
+<div class="card">
 
-<a href="/categories/<%= category._id %>">View Category</a>
+<p><strong>Name:</strong> <%= category.name %></p>
 
-<hr>
+<a class="button" href="/categories/<%= category._id %>">
+View Category
+</a>
+
+</div>
 
 <% }) %>
+
+</div>
 
 </body>
 </html>

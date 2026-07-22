@@ -4,20 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Expense Details</title>
+<link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
 
+<div class="container">
+
 <a href="/">Homepage</a>
+
+<div class="card">
 
 <h1>Expense Details</h1>
 
 <p><strong>Title:</strong> <%= expense.title %></p>
+
 <p><strong>Amount:</strong> <%= expense.amount %> BD</p>
+
 <p><strong>Date:</strong> <%= expense.date %></p>
+
 <p><strong>Description:</strong> <%= expense.description %></p>
+
 <p><strong>Payment Method:</strong> <%= expense.paymentMethod %></p>
 
-<a href="/expenses/<%= expense._id %>/edit">Edit Expense</a>
+<a class="button" href="/expenses/<%= expense._id %>/edit">
+Edit Expense
+</a>
 
 <br><br>
 
@@ -28,6 +40,10 @@
 <br>
 
 <a href="/expenses">Back to Expenses</a>
+
+</div>
+
+</div>
 
 </body>
 </html>
