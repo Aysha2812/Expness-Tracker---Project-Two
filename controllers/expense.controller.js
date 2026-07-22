@@ -2,7 +2,7 @@ const express=require("express");
 const router=express.Router();
 
 const Expense=require("../models/Expense");
-const Category=require("../models/category");
+const Category=require("../models/Category");
 
 //GET-New expense form
 router.get("/new",async(req,res)=>{

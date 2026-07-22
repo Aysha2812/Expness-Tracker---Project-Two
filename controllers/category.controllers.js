@@ -1,7 +1,7 @@
 const express=require("express");
 const router=express.Router();
 
-const Category=require("../models/category");
+const Category=require("../models/Category");
 
 //GET-New category form
 router.get("/new",(req,res)=>{

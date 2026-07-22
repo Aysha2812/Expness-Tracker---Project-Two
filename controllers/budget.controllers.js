@@ -1,8 +1,8 @@
 const express=require("express");
 const router=express.Router();
 
-const Budget=require("../models/budget");
-const Category=require("../models/category");
+const Budget=require("../models/Budget");
+const Category=require("../models/Category");
 
 //GET-New budget form
 router.get("/new",async(req,res)=>{
