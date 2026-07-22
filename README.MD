@@ -7,18 +7,27 @@ Expense Tracker is a web application that helps users manage their personal fina
 ---
 
 ## Screenshots
+![
+](image.png)
+
+![alt text](image-5.png)
+
+![alt text](image-6.png)
+
+
 
 ### Home Page
-
+![alt text](image-1.png)
 ### Dashboard
-
+![alt text](image-7.png)
 ### Expenses Page
-
+![alt text](image-2.png)
 ### Categories Page
-*(Add screenshot here)*
+![alt text](image-4.png)
 
 ### Budget Page
-*(Add screenshot here)*
+![alt text](image-3.png)
+
 
 ---
 
@@ -33,13 +42,6 @@ Expense Tracker is a web application that helps users manage their personal fina
 
 ---
 
-## Getting Started
-
----
-
-## Installation
-
----
 
 ## User Stories
 

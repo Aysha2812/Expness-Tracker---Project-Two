@@ -1,7 +1,7 @@
 const express=require("express");
 const router=express.Router();
 
-const Expense=require("../models/expense");
+const Expense=require("../models/Expense");
 const Category=require("../models/category");
 
 //GET-New expense form
